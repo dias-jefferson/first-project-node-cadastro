@@ -38,10 +38,11 @@ app.post('/users', (request, response) => {
 })
 
 app.put('/users/:id', checkUserId,(request, response) => {
-    const index = request.userIndex
-    const {name, age} = request.body
+    const  id  = request.userId
+    const { name, age } = request.body
     
-    const { id } = request.userId
+    
+    const index = request.userIndex
     const updatedUser = {id, name, age}
     
 
